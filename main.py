@@ -20,3 +20,11 @@ if __name__ == "__main__":
   bub_sort_int = bubble_sort(test_int)
   bub_sort_str = bubble_sort(test_str)
   print(f"{bub_sort_int=}, {bub_sort_str=}")
+  
+  mer_sort_int = merge_sort(test_int)
+  mer_sort_str = merge_sort(test_str)
+  print(f"{mer_sort_int=}, {mer_sort_str=}")
+  
+  qui_sort_int = quick_sort(test_int)
+  qui_sort_str = quick_sort(test_str)
+  print(f"{qui_sort_int=}, {qui_sort_str=}")
