@@ -56,11 +56,32 @@ def merge_sort(_lst: list) -> list:
     Time complexity:
         The worst: O(n*log(n)) | Avg: O(n*log(n)) | The best: O(n*log(n))
     Space complexity:
-        Temporary array: O(n) | Recursion: O(log(n)) | In-place: O(1)
+        O(n) (additional array)
     '''
+    def merge_sorted_lists(a: list, b: list) -> list:
+        res = []
+        N, M = len(a), len(b)
+        i = j = 0
+        while i < N and j < M:
+            if a[i] <= b[j]:
+                res.append(a[i])
+                i += 1
+            else:
+                res.append(b[j])
+                j += 1
+        res.extend(a[i:] + b[j:])
+        return res
+
     lst = _lst
-    ...
-    return lst
+    mid = len(lst) // 2
+    lst_left, lst_right = lst[:mid], lst[mid:]
+
+    if len(lst_left) > 1:
+        lst_left = merge_sort(lst_left)
+    if len(lst_right) > 1:
+        lst_right = merge_sort(lst_right)
+
+    return merge_sorted_lists(lst_left, lst_right)
 
 
 def quick_sort(_lst: list) -> list:
@@ -68,7 +89,7 @@ def quick_sort(_lst: list) -> list:
     Time complexity:
         The worst: O(n^2) | Avg: O(n*log(n)) | The best: O(n*log(n))
     Space complexity:
-        Imbalance split: O(n) | Recursion: O(log(n)) | In-place: O(1)
+        O(log(n)) (recursion)
     '''
     lst = _lst
     ...
