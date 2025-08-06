@@ -1,8 +1,11 @@
-# Time complexity:
-#   The worst: O(n^2) | The best: O(n^2)
-# Space complexity:
-#   O(1) (in-place)
+
 def selection_sort(_lst: list) -> list:
+    '''
+    Time complexity:
+        The worst: O(n^2) | The best: O(n^2)
+    Space complexity:
+        O(1) (in-place)
+    '''
     lst = _lst.copy()
     N = len(lst)
     for i in range(N-1):
@@ -13,11 +16,14 @@ def selection_sort(_lst: list) -> list:
         lst[p], lst[i] = lst[i], lst[p]
     return lst
 
-# Time complexity:
-#   The worst: O(n^2) | The best: O(n) (if already sorted)
-# Space complexity:
-#   O(1) (in-place)
+
 def insertion_sort(_lst: list) -> list:
+    '''
+    Time complexity:
+        The worst: O(n^2) | The best: O(n) (if already sorted)
+    Space complexity:
+        O(1) (in-place)
+    '''
     lst = _lst.copy()
     N = len(lst)
     for i in range(1, N):
@@ -28,11 +34,14 @@ def insertion_sort(_lst: list) -> list:
                 break
     return lst
 
-# Time complexity:
-#   The worst: O(n^2) | The best: O(n) (if already sorted)
-# Space complexity:
-#   O(1) (in-place)
+
 def bubble_sort(_lst: list) -> list:
+    '''
+    Time complexity:
+        The worst: O(n^2) | The best: O(n) (if already sorted)
+    Space complexity:
+        O(1) (in-place)
+    '''
     lst = _lst.copy()
     ...
     return lst
