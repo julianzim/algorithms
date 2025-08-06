@@ -1,3 +1,4 @@
+# O(n^2)
 def selection_sort(lst: list) -> list:
     N = len(lst)
     for i in range(N-1):
