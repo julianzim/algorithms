@@ -49,3 +49,27 @@ def bubble_sort(_lst: list) -> list:
             if lst[j+1] < lst[j]:
                 lst[j+1], lst[j] = lst[j], lst[j+1]
     return lst
+
+
+def merge_sort(_lst: list) -> list:
+    '''
+    Time complexity:
+        The worst: O(n*log(n)) | Avg: O(n*log(n)) | The best: O(n*log(n))
+    Space complexity:
+        Temporary array: O(n) | Recursion: O(log(n)) | In-place: O(1)
+    '''
+    lst = _lst
+    ...
+    return lst
+
+
+def quick_sort(_lst: list) -> list:
+    '''
+    Time complexity:
+        The worst: O(n^2) | Avg: O(n*log(n)) | The best: O(n*log(n))
+    Space complexity:
+        Imbalance split: O(n) | Recursion: O(log(n)) | In-place: O(1)
+    '''
+    lst = _lst
+    ...
+    return lst
