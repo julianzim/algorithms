@@ -1,5 +1,6 @@
 # O(n^2)
-def selection_sort(lst: list) -> list:
+def selection_sort(_lst: list) -> list:
+    lst = _lst.copy()
     N = len(lst)
     for i in range(N-1):
         m = lst[i]
@@ -13,3 +14,13 @@ def selection_sort(lst: list) -> list:
     return lst
 
 
+def insertion_sort(_lst: list) -> list:
+    lst = _lst
+    ...
+    return lst
+
+
+def bubble_sort(_lst: list) -> list:
+    lst = _lst.copy()
+    ...
+    return lst
